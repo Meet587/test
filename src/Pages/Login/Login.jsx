@@ -23,7 +23,6 @@ const Login = () => {
       .then((responce) => responce.json())
       .then((json) => (data.current = json));
   });
-  console.log(data.current)
   return (
     <>
       <>

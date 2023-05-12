@@ -9,7 +9,6 @@ document.title="Meet Rakholiya"
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => setData(response.data));
   },[]);
-  console.log(data);
   return <div>hello from index 2</div>;
 };
 

@@ -9,11 +9,24 @@ import Dashbord from "./Components/Dashbord/Dashbord";
 // import Todo from "./Components/Todo-app";
 import { useEffect, useState } from "react";
 import { Suspense } from "react";
+import axios from "axios";
 const Todo = React.lazy(() => import("./Components/Todo-app"));
 const Login = React.lazy(() => import("./Pages/Login/Login"));
 
 function App() {
   const isAuth = localStorage.getItem("isAuth");
+  async function axiosApi() {
+    try {
+      const responce = await axios.get(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const data = responce;
+      console.log(data);
+    } catch (error) {
+      console.log("there has been something wrong:", error);
+    }
+  }
+  axiosApi();
   return (
     <>
       {/* <Login /> */}
