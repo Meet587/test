@@ -20,7 +20,7 @@ function App() {
       const responce = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
       );
-      const data = responce;
+      const data = responce.data;
       console.log(data);
     } catch (error) {
       console.log("there has been something wrong:", error);
